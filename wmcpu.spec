@@ -9,8 +9,8 @@ Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	http://www.linuxwarez.com/~timecop/%{name}-%{version}.tar.gz
 Source1:	wmcpu.desktop
 Patch:		wmcpu-makefile.patch
-BuildPrereq:	XFree86-devel
-BuildPrereq:	xpm-devel
+BuildRequires:	XFree86-devel
+BuildRequires:	xpm-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define _prefix	/usr/X11R6
