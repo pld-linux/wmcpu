@@ -1,0 +1,19 @@
+--- wmcpu/Makefile~	Tue Nov 10 05:56:37 1998
++++ wmcpu/Makefile	Thu Jul  8 15:23:53 1999
+@@ -1,5 +1,7 @@
+ LIBDIR = -L/usr/X11R6/lib
+ LIBS   = -lXpm -lXext -lX11
++INCDIR = -I/usr/X11R6/include
++CFLAGS = -Wall
+ OBJS =  wmcpu.o \
+ 		../wmgeneral/wmgeneral.o \
+ 		../wmgeneral/misc.o \
+@@ -7,7 +9,7 @@
+ 
+ 
+ .c.o:
+-	cc -c -Wall $< -o $*.o
++	cc -c $(CFLAGS) $(INCDIR) $< -o $*.o
+ 
+ wmcpu: $(OBJS)
+ 	cc -o wmcpu $^ $(LIBDIR) $(LIBS)
