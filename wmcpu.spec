@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.ne.jp/asahi/linux/timecop/software/%{name}-%{version}.tar.gz
+# Source0-md5:	1e8e108c613cde810eed40e6ce4c26d9
 Source1:	%{name}.desktop
 URL:		http://www.ne.jp/asahi/linux/timecop/
 BuildRequires:	XFree86-devel
