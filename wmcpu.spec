@@ -11,7 +11,6 @@ URL:		http://www.ne.jp/asahi/linux/timecop/
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define 	_prefix		/usr/X11R6
 
 %description
 wmcpu is a program for WindowMaker Dock which gives a graphical
