@@ -7,9 +7,10 @@ License:	GPL
 Group:		X11/Window Managers/Tools
 Group(de):	X11/Fenstermanager/Werkzeuge
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-Source0:	http://www.linuxwarez.com/~timecop/%{name}-%{version}.tar.gz
+Source0:	http://www.ne.jp/asahi/linux/timecop/software/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-makefile.patch
+URL:		http://www.ne.jp/asahi/linux/timecop/
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -44,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES.gz
+%doc *.gz
 %attr(755,root,root) %{_bindir}/%{name}
 
 %{_applnkdir}/DockApplets/wmcpu.desktop
