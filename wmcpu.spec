@@ -1,15 +1,14 @@
 Summary:	Dockable cpu monitor for WindowMaker
 Summary(pl):	Dokowalny monitor procesora dla WindowMakera
 Name:		wmcpu
-Version:	1.2
-Release:	2
+Version:	1.3
+Release:	1
 License:	GPL
 Group:		X11/Window Managers/Tools
 Group(de):	X11/Fenstermanager/Werkzeuge
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	http://www.ne.jp/asahi/linux/timecop/software/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
-Patch0:		%{name}-makefile.patch
 URL:		http://www.ne.jp/asahi/linux/timecop/
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -25,20 +24,20 @@ wmcpu jest programem dla Doku WindowMakera, wy¶wietlaj±cym w formie
 graficznej informacje o wykorzystaniu zasobów systemowych.
 
 %prep
-%setup -q -n %{name}.app
-%patch -p0
+%setup -q
 
 %build
-%{__make} -C %{name} CFLAGS="%{rpmcflags} -Wall"
+%{__make} %{name} CFLAGS="%{rpmcflags} -Wall"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/DockApplets} 
+install -d $RPM_BUILD_ROOT%{_applnkdir}/DockApplets 
 
-install %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
+%{__make} DESTDIR=$RPM_BUILD_ROOT install
+
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
-gzip -9nf CHANGES
+gzip -9nf ChangeLog README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
