@@ -35,7 +35,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/DockApplets}
 
 install %{name} $RPM_BUILD_ROOT%{_bindir}
 
-#install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
 
 %clean
@@ -46,4 +46,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README
 %attr(755,root,root) %{_bindir}/%{name}
 
-#%%{_applnkdir}/DockApplets/wmcpu.desktop
+%{_applnkdir}/DockApplets/wmcpu.desktop
