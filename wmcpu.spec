@@ -45,4 +45,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README
 %attr(755,root,root) %{_bindir}/%{name}
 
-#%{_applnkdir}/DockApplets/wmcpu.desktop
+#%%{_applnkdir}/DockApplets/wmcpu.desktop
