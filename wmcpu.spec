@@ -35,7 +35,7 @@ install -d $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
+#install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
 gzip -9nf ChangeLog README
 
@@ -47,4 +47,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %attr(755,root,root) %{_bindir}/%{name}
 
-%{_applnkdir}/DockApplets/wmcpu.desktop
+#%{_applnkdir}/DockApplets/wmcpu.desktop
