@@ -3,6 +3,6 @@ Name=WmCpu
 Comment=CPU Monitor
 Comment[pl]=Monitor procesora
 Exec=wmcpu
-Terminal=0
+Terminal=false
 Type=Application
 # vi: encoding=utf-8
