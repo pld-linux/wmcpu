@@ -28,7 +28,7 @@ w formie graficznej informacje o wykorzystaniu zasobów systemowych.
 %patch -p0
 
 %build
-make -C %{name} CFLAGS="$RPM_OPT_FLAGS -Wall"
+%{__make} -C %{name} CFLAGS="$RPM_OPT_FLAGS -Wall"
 
 %install
 rm -rf $RPM_BUILD_ROOT
