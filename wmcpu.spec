@@ -10,7 +10,6 @@ Source0:	http://www.linuxwarez.com/~timecop/%{name}-%{version}.tar.gz
 Source1:	wmcpu.desktop
 Patch:		wmcpu-makefile.patch
 BuildRequires:	XFree86-devel
-BuildRequires:	xpm-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix		/usr/X11R6
