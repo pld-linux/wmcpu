@@ -2,7 +2,7 @@ Summary:	Dockable cpu monitor for WindowMaker
 Summary(pl):	Dokowalny monitor procesora dla WindowMakera
 Name:		wmcpu
 Version:	1.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.ne.jp/asahi/linux/timecop/software/%{name}-%{version}.tar.gz
