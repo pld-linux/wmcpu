@@ -33,7 +33,7 @@ graficznej informacje o wykorzystaniu zasobów systemowych.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/DockApplets}
 
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
+install %{name} $RPM_BUILD_ROOT%{_bindir}
 
 #install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
