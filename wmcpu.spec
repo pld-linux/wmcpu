@@ -14,6 +14,7 @@ BuildRequires:	xpm-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define 	_prefix		/usr/X11R6
+%define		_applnkdir	%{_datadir}/applnk
 
 %description
 wmcpu is a program for WindowMaker Dock which gives a graphical 
@@ -33,10 +34,10 @@ make -C %{name} CFLAGS="$RPM_OPT_FLAGS -Wall"
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT{%{_bindir},/usr/X11R6/share/applnk/DockApplets} 
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/DockApplets} 
 
 install -s %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
-install %{SOURCE1} $RPM_BUILD_ROOT/usr/X11R6/share/applnk/DockApplets
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
 gzip -9nf CHANGES
 
@@ -48,4 +49,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGES.gz
 %attr(755,root,root) %{_bindir}/%{name}
 
-/usr/X11R6/share/applnk/DockApplets/wmcpu.desktop
+%{_applnkdir}/DockApplets/wmcpu.desktop
