@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=wmcpu
+Comment=CPU Monitor
+Comment[pl]=Monitor procesora
+Exec=wmcpu
+Terminal=0
+Type=Application
