@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=wmcpu
+Name=WmCpu
 Comment=CPU Monitor
 Comment[pl]=Monitor procesora
 Exec=wmcpu
