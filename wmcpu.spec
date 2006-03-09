@@ -25,7 +25,7 @@ graficznej informacje o wykorzystaniu zasobów systemowych.
 
 %build
 %{__make} %{name} \
-	CC=%{__cc} \
+	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags} -Wall" \
 	LDFLAGS="-L/usr/X11R6/%{_lib} -lXpm -lXext -lX11"
 
