@@ -1,5 +1,5 @@
 Summary:	Dockable cpu monitor for WindowMaker
-Summary(pl):	Dokowalny monitor procesora dla WindowMakera
+Summary(pl.UTF-8):   Dokowalny monitor procesora dla WindowMakera
 Name:		wmcpu
 Version:	1.3
 Release:	4
@@ -16,9 +16,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 wmcpu is a program for WindowMaker Dock which gives a graphical
 representation of the info provided by uptime.
 
-%description -l pl
-wmcpu jest programem dla Doku WindowMakera, wy¶wietlaj±cym w formie
-graficznej informacje o wykorzystaniu zasobów systemowych.
+%description -l pl.UTF-8
+wmcpu jest programem dla Doku WindowMakera, wyÅ›wietlajÄ…cym w formie
+graficznej informacje o wykorzystaniu zasobÃ³w systemowych.
 
 %prep
 %setup -q
