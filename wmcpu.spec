@@ -1,5 +1,5 @@
 Summary:	Dockable cpu monitor for WindowMaker
-Summary(pl.UTF-8):   Dokowalny monitor procesora dla WindowMakera
+Summary(pl.UTF-8):	Dokowalny monitor procesora dla WindowMakera
 Name:		wmcpu
 Version:	1.3
 Release:	4
