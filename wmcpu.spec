@@ -2,14 +2,15 @@ Summary:	Dockable cpu monitor for WindowMaker
 Summary(pl.UTF-8):	Dokowalny monitor procesora dla WindowMakera
 Name:		wmcpu
 Version:	1.3
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.ne.jp/asahi/linux/timecop/software/%{name}-%{version}.tar.gz
 # Source0-md5:	1e8e108c613cde810eed40e6ce4c26d9
 Source1:	%{name}.desktop
 URL:		http://www.ne.jp/asahi/linux/timecop/
-BuildRequires:	XFree86-devel
+BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-lib-libXpm-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -27,7 +28,7 @@ graficznej informacje o wykorzystaniu zasobów systemowych.
 %{__make} %{name} \
 	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags} -Wall" \
-	LDFLAGS="-L/usr/X11R6/%{_lib} -lXpm -lXext -lX11"
+	LDFLAGS="-L/usr/%{_lib} -lXpm -lXext -lX11"
 
 %install
 rm -rf $RPM_BUILD_ROOT
